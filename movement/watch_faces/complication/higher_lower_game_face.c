@@ -102,7 +102,7 @@ static void shuffle_deck(void) {
     uint8_t tmp;
 
     for (i = DECK_SIZE - 1; i > 0; i--) {
-        j = generate_random_number(0xFF) % (i + 1);
+        j = generate_random_number(i + 1);
         tmp = deck[j];
         deck[j] = deck[i];
         deck[i] = tmp;
